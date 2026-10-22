@@ -1,0 +1,18 @@
+.graduation-popup{width:min(440px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:0;border:0;border-radius:12px;background:#e7f2ed;color:#203b31;box-shadow:0 20px 80px #0005;overflow-y:auto;overscroll-behavior:contain}
+.graduation-popup::backdrop{background:rgba(12,25,21,.6)}
+.graduation-popup-content{text-align:center;padding:24px 24px 0}
+.graduation-popup-brand{margin:0 0 14px;font-size:14px;font-weight:700;color:#007e70}
+.graduation-popup h2{margin:0;font-family:inherit;font-size:30px;line-height:1.3;letter-spacing:-1px;font-weight:600}
+.graduation-popup h2 strong{display:inline-block;color:#007e70;font-size:58px;font-weight:800;margin-top:4px}
+.graduation-popup-content>p:last-of-type{font-size:14px;margin:12px 0 18px;line-height:1.6;word-break:keep-all}
+.graduation-popup-figure{position:relative;margin:0 -24px;aspect-ratio:1.5;overflow:hidden}
+.graduation-popup-figure img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 57%}
+.graduation-popup-figure figcaption{position:absolute;top:auto;bottom:12px;right:12px;left:auto;transform:none;font-size:10px;background:#173e32de;color:#fff;padding:5px 8px;border-radius:2px;line-height:1.3}
+.graduation-popup-actions{display:grid;grid-template-columns:1fr 1.7fr;background:#fff;border-top:1px solid #d7e4dd}
+.graduation-popup-actions button{font:inherit;font-size:13px;font-weight:600;line-height:1.5;min-height:54px;padding:14px 10px;color:#334e42;border:0;background:#fff;cursor:pointer;word-break:keep-all}
+.graduation-popup-actions button+button{border-left:1px solid #d7e4dd}
+.graduation-popup-actions button:hover{background:#edf5f0}
+.graduation-popup-actions button:focus-visible{outline:3px solid #007e70;outline-offset:-5px}
+html.graduation-popup-open{overflow:hidden}
+@media(max-width:480px){.graduation-popup-content{padding-top:22px}.graduation-popup h2{font-size:25px}.graduation-popup h2 strong{font-size:50px}.graduation-popup-content>p:last-of-type{font-size:12px}.graduation-popup-actions button{font-size:12px}.graduation-popup-figure{aspect-ratio:1.3}}
+@media(max-height:640px){.graduation-popup-content{padding-top:16px}.graduation-popup-brand{margin-bottom:8px}.graduation-popup h2{font-size:23px}.graduation-popup h2 strong{font-size:43px}.graduation-popup-figure{aspect-ratio:1.8}}

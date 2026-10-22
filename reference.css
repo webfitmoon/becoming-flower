@@ -1,0 +1,110 @@
+/* f-mans에서 확인한 넓은 배너·굵은 고딕·흰색 본문·청록 강조를 적용. */
+:root{--ink:#202b28;--muted:#5c6762;--purple:#007e70;--lilac:#eaf2ed;--pink:#edf6f2;--line:#dce5df;--width:1320px}
+@font-face{font-family:Pretendard;src:url("assets/PretendardVariable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+body{font-family:Pretendard,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+.gift-categories{display:block;position:static;max-width:1320px;margin:auto;padding:42px 50px 0;background:#fff;border:0}
+.gift-categories ul{display:flex;justify-content:center;gap:42px;list-style:none;padding:0;margin:0}
+.gift-categories li{width:148px;text-align:center}
+.gift-categories a{display:block;padding:0;font-weight:600;font-size:16px}
+.gift-categories figure{height:148px;position:relative;overflow:hidden;border-radius:50%;background:#eef2ef}
+.gift-categories img{object-position:50% 62%}
+.gift-categories figcaption{top:auto;bottom:12px;left:50%;right:auto;transform:translateX(-50%);white-space:nowrap;font-size:9px;padding:5px 7px}
+.gift-categories span{display:block;margin-top:13px}
+.occasion-copy article{scroll-margin-top:115px}
+@media(max-width:700px){.gift-categories{display:block;position:static;padding:32px 24px 0;border:0}.gift-categories ul{gap:30px}.gift-categories li{width:112px}.gift-categories figure{height:112px}.gift-categories a{padding:0;font-size:14px}.gift-categories span{margin-top:10px}.gift-categories figcaption{bottom:9px;font-size:8px}.occasion-copy article{scroll-margin-top:95px}}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline-color:#007e70}
+.header{background:#fff;border-bottom:1px solid #e7ece8}
+.header-inner{min-height:96px;padding-left:50px;padding-right:50px}
+.brand{font-size:31px;font-weight:800;letter-spacing:-2px;color:#007e70}
+.brand span{font-size:12px;letter-spacing:.5px;color:#65736a}
+nav{font-size:15px;gap:40px}
+nav a:last-child{color:#007e70}
+nav a:hover,.text-link:hover{color:#007e70}
+.hero{position:relative;display:block;isolation:isolate;max-width:1600px;min-height:680px;background:#e8ede9;overflow:hidden;border-bottom-right-radius:100px}
+.hero-copy{position:relative;z-index:2;min-height:680px;width:55%;padding:85px 55px 85px max(55px,calc((100vw - 1220px)/2));background:linear-gradient(90deg,#e8ede9 0%,#e8ede9 67%,rgba(232,237,233,0) 100%)}
+.hero .intro{color:#256658;font-size:15px;font-weight:700}
+.hero h1{font-size:clamp(39px,3.6vw,56px);line-height:1.33;font-weight:750;letter-spacing:-2.9px}
+.hero-description{font-size:16px;max-width:420px;color:#4e6056}
+.button{background:#007e70;border-radius:3px;padding:17px 25px;font-size:14px;gap:28px}
+.button:hover{background:#006254}
+.hero-image{position:absolute;inset:0;min-height:0;z-index:0}
+.hero-image img{position:absolute;inset:0 0 0 auto;width:62%;height:100%;object-fit:cover;object-position:50% 56%}
+.hero-image:after{display:none}
+figcaption{background:#243e34de;top:24px;right:28px;border-radius:2px;padding:9px 12px}
+.hero .text-link{color:#355d4f;font-weight:600;margin-top:22px}
+.section{padding:94px 50px}
+.section h2{font-weight:700;font-size:36px;letter-spacing:-1.8px;line-height:1.5}
+.section .intro{color:#007e70;font-size:13px;letter-spacing:0}
+.occasion-layout{gap:90px;margin-top:45px;grid-template-columns:1.05fr 1fr}
+.detail-image{height:530px;background:#e9edeb;border-radius:0 0 65px 0}
+.detail-image img{transform:none;object-position:50% 65%}
+.small-label{color:#007e70;font-size:13px}
+.occasion-copy h3{font-weight:700;font-size:25px}
+.occasion-copy p{font-size:15px;color:#59665e;max-width:425px}
+.occasion-copy article+article{margin-top:36px;padding-top:36px}
+.delivery{background:#f5f7f5;border:0;max-width:none;grid-template-columns:1fr 1fr;padding-left:max(50px,calc((100vw - 1220px)/2));padding-right:max(50px,calc((100vw - 1220px)/2));gap:80px}
+.delivery-list>div{padding:23px 0;grid-template-columns:110px 1fr}
+.delivery-list h3{font-weight:700;font-size:16px}
+.delivery-list p{font-size:15px}
+.prepare-list li{border-top:3px solid #008573;margin-right:28px;padding-top:24px}
+.prepare-list span{font-weight:700;font-size:20px}
+.prepare-list p{font-size:14px}
+.contact{background:#e2efea;padding-top:90px;padding-bottom:90px}
+.contact h2{font-size:40px;font-weight:700;letter-spacing:-2px}
+.contact .intro{color:#007366}
+.contact-note{border-color:#bdd4c8;color:#466356}
+footer{padding:45px 50px}
+@media(min-width:1600px){.hero-copy{padding-left:190px}}
+@media(max-width:1000px){.header-inner{padding-left:30px;padding-right:30px}nav{gap:24px}.hero-copy{padding-left:35px;padding-right:20px;width:60%;min-height:620px}.hero{min-height:620px}.hero h1{font-size:42px}.hero-description{font-size:14px}.hero-image img{width:66%;object-position:60% 50%}.section{padding:75px 35px}.section h2{font-size:30px}.occasion-layout{gap:45px}.detail-image{height:450px}.delivery{gap:35px}.delivery-list>div{grid-template-columns:90px 1fr;gap:12px}.delivery-list p{font-size:14px}.prepare-list span{font-size:18px}}
+@media(max-width:700px){.header-inner{min-height:76px;padding:13px 22px}.brand{font-size:27px}.brand span{font-size:11px}nav{font-size:14px}.hero{min-height:0;border-bottom-right-radius:54px}.hero-copy{width:100%;min-height:0;padding:44px 24px 38px;background:#e8ede9}.hero .intro{font-size:12px;margin-bottom:19px}.hero h1{font-size:39px;letter-spacing:-2px;line-height:1.35}.hero-description{font-size:14px}.hero-image{position:relative;inset:auto;min-height:0;height:390px}.hero-image img{position:static;width:100%;object-position:50% 58%}.hero-image figcaption{right:20px;top:18px}.button{font-size:13px;padding:14px 20px}.hero .text-link{font-size:12px}.section{padding:65px 24px}.section h2{font-size:28px;letter-spacing:-1.4px}.occasion-layout{gap:32px;margin-top:30px;grid-template-columns:1fr}.detail-image{height:350px;border-bottom-right-radius:45px}.detail-image img{object-position:50% 67%}.occasion-copy h3{font-size:23px}.occasion-copy p{font-size:14px}.delivery{grid-template-columns:1fr;gap:33px}.delivery-list>div{grid-template-columns:92px 1fr;padding:20px 0}.delivery-list p{font-size:13px}.delivery-list h3{font-size:14px}.prepare-list li{margin:0;padding-top:18px}.prepare-list span{font-size:18px}.prepare-list p{font-size:13px}.contact h2{font-size:29px}.contact-note{font-size:12px}footer{padding:32px 24px}}
+/* 배송 안내: 제목 아래로 안내 목록이 이어지는 1컬럼 */
+.delivery{grid-template-columns:minmax(0,1fr);gap:42px}
+.delivery-list{width:100%}
+.delivery-list>div{grid-template-columns:32px 130px minmax(0,1fr);align-items:center;gap:20px}
+.delivery-icon{width:27px;height:27px;color:#007e70}
+@media(max-width:700px){.delivery{gap:32px}.delivery-list>div{grid-template-columns:28px minmax(0,1fr);gap:6px 14px}.delivery-icon{grid-row:1 / 3;align-self:start;width:25px;height:25px}.delivery-list p{grid-column:2}.delivery-list h3{grid-column:2}}
+/* 꽃 선물을 받은 순간을 담은 CTA 배경 */
+.contact{position:relative;isolation:isolate;overflow:hidden;text-align:left;min-height:520px;padding-left:max(50px,calc((100vw - 1220px)/2));padding-right:max(50px,calc((100vw - 1220px)/2));background:#183c31;color:#fff}
+.contact-background{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:75% 40%}
+.contact:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,31,23,.91) 0%,rgba(8,31,23,.82) 40%,rgba(8,31,23,.25) 72%,rgba(8,31,23,.12) 100%)}
+.contact-content{max-width:630px;position:relative}
+.contact .intro{color:#d8eee2}
+.contact-content>p:not(.intro){font-size:16px;line-height:1.9;margin-top:25px;color:#f1f6f2}
+.contact .contact-note{margin:32px 0 0;border-color:#ffffff55;color:#edf5ef;max-width:370px}
+.contact-image-label{position:absolute;right:24px;bottom:20px;font-size:11px;background:#18382be6;color:#fff;padding:5px 10px;border-radius:2px}
+@media(max-width:700px){.contact{padding:68px 24px;min-height:550px}.contact-background{object-position:73% 35%}.contact:before{background:linear-gradient(90deg,rgba(8,31,23,.91),rgba(8,31,23,.64))}.contact-content>p:not(.intro){font-size:14px}.contact h2{font-size:29px}.contact-image-label{right:18px;bottom:16px}}
+/* 선물 상황별 설명 왼쪽 아이콘 */
+.occasion-copy article{display:grid;grid-template-columns:34px minmax(0,1fr);gap:20px;align-items:start}
+.occasion-icon{width:32px;height:32px;color:#007e70;margin-top:3px}
+@media(max-width:700px){.occasion-copy article{grid-template-columns:28px minmax(0,1fr);gap:14px}.occasion-icon{width:27px;height:27px}}
+/* 상단 이미지 3장 슬라이드 */
+.hero-image .hero-slide{opacity:0;transition:opacity .7s ease;pointer-events:none}
+.hero-image .hero-slide.is-active{opacity:1}
+.hero-image .hero-slide:nth-of-type(2){object-position:50% 64%}
+.hero-image .hero-slide:nth-of-type(3){object-position:76% 40%}
+.hero-slider-controls{position:absolute;right:44px;bottom:28px;z-index:3;display:flex;align-items:center;gap:4px;padding:5px;border-radius:4px;background:#173d32e8;color:#fff;font-size:12px}
+.hero-slider-controls[hidden]{display:none}
+.hero-slider-controls button{border:0;background:transparent;color:inherit;min-width:40px;min-height:40px;cursor:pointer;font-size:24px;border-radius:2px}
+.hero-slider-controls button:hover{background:#ffffff22}
+.hero-slider-controls .slide-pause{font-size:12px;padding:0 12px;border-left:1px solid #ffffff55;margin-left:5px}
+.slide-counter{min-width:44px;text-align:center;font-variant-numeric:tabular-nums}
+@media(max-width:700px){.hero-image .hero-slide{position:absolute;inset:0;width:100%;height:100%}.hero-slider-controls{right:22px;bottom:20px}}
+@media(prefers-reduced-motion:reduce){.hero-image .hero-slide{transition:none}}
+/* 여섯 가지 선물 테마 */
+.gift-categories ul{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:30px;max-width:1080px;margin:auto}
+.gift-categories li{width:auto;min-width:0}
+.gift-categories figure{width:100%;height:auto;aspect-ratio:1}
+.gift-categories li:last-child img{object-position:80% 40%}
+@media(max-width:1000px){.gift-categories ul{gap:20px}}
+@media(max-width:700px){.gift-categories ul{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 18px;max-width:420px}.gift-categories li{width:auto}.gift-categories figure{height:auto}.gift-categories span{font-size:14px}}
+.contact .contact-button{display:inline-flex;margin-top:32px;background:#fff;color:#006052;gap:28px;border:1px solid #fff}
+.contact .contact-button:hover{background:#e4f0e9}
+/* 배너 전체를 채우는 슬라이드, 고정 문구 오버레이 */
+.hero{max-width:none;border-radius:0;background:#264638}
+.hero-copy{width:100%;background:linear-gradient(90deg,rgba(9,31,23,.83),rgba(9,31,23,.48) 48%,rgba(9,31,23,.12));color:#fff}
+.hero-image{position:absolute;inset:0;height:100%}
+.hero-image .hero-slide{width:100%;height:100%;object-position:50% 55%}
+.hero-image .hero-slide:nth-of-type(3){object-position:75% 40%}
+.hero .intro,.hero .hero-description,.hero .text-link{color:#fff}
+.hero-image figcaption{z-index:4}
+@media(max-width:700px){.hero{min-height:600px}.hero-copy{min-height:600px;padding-top:70px;padding-bottom:70px;background:linear-gradient(90deg,rgba(9,31,23,.84),rgba(9,31,23,.44))}.hero-image{position:absolute;height:100%}.hero-image .hero-slide{object-position:60% 55%}.hero-image .hero-slide:nth-of-type(3){object-position:74% 40%}}

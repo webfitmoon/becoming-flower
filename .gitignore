@@ -1,0 +1,11 @@
+output/
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example
+작업메모.md
+verify*.cjs
+reference-check.cjs
+assets/bouquet-example.svg
+assets/theme-cheer.jpg

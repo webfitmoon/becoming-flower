@@ -1,0 +1,11 @@
+.git/
+output/
+node_modules/
+.env
+.env.*
+작업메모.md
+verify*.cjs
+reference-check.cjs
+README.md
+assets/bouquet-example.svg
+assets/theme-cheer.jpg
