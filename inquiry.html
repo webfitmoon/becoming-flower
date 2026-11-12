@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="비커밍 김혜경에게 스레드 컨설팅과 강의를 문의하세요.">
+<title>문의 | 비커밍 김혜경</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="reference.css"><link rel="stylesheet" href="branding.css"><link rel="stylesheet" href="inquiry.css">
+<script src="inquiry.js" defer></script>
+</head>
+<body class="inquiry-page">
+<a class="skip" href="#main">본문으로 바로가기</a>
+<header class="header"><div class="header-inner"><a href="/#home" class="brand" aria-label="비커밍 첫 화면">비커밍<span>becoming</span></a><button class="menu-toggle" aria-controls="navigation" aria-expanded="false">메뉴 열기</button><nav id="navigation" aria-label="주요 메뉴"><a href="/#about">소개</a><a href="/#programs">활동</a><a href="/#challenge">챌린지</a><a href="/inquiry" aria-current="page">문의</a></nav></div></header>
+<main id="main" class="inquiry-main">
+<div class="inquiry-heading"><p class="intro">비커밍 · 문의</p><h1>지금의 고민에서,<br>다음 시작을 함께.</h1><p>스레드 컨설팅이 필요한가요, 함께 배울 강의를 찾고 있나요?<br>원하는 도움을 선택하고 지금의 상황을 알려주세요.</p></div>
+<div class="inquiry-layout">
+<div class="form-panel">
+<ol class="step-indicator" aria-label="문의 작성 단계"><li class="is-active" aria-current="step" data-progress="1"><span>01</span> 문의 내용</li><li data-progress="2"><span>02</span> 일정·연락처</li></ol>
+<form id="inquiry-form">
+<section data-step="1" aria-labelledby="step-one-title">
+<p class="step-kicker">STEP 01</p><h2 id="step-one-title" tabindex="-1">어떤 도움이 필요하신가요?</h2><p class="step-description">문의 유형을 선택하면 필요한 항목이 이어집니다.</p>
+<fieldset class="type-fieldset"><legend>문의 유형 <span class="required">필수</span></legend><div class="type-options">
+<label class="type-option"><input type="radio" name="inquiry_type" value="threads" required><span><strong>스레드 컨설팅</strong><small>내 경험을 정리하고, 나다운 콘텐츠 방향 찾기</small></span><span class="selection-mark" aria-hidden="true"></span></label>
+<label class="type-option"><input type="radio" name="inquiry_type" value="lecture" required><span><strong>강의</strong><small>기관·기업·모임에 맞는 강의와 워크숍</small></span><span class="selection-mark" aria-hidden="true"></span></label>
+</div></fieldset>
+<fieldset data-fields="threads" disabled hidden><legend class="sr-only">스레드 컨설팅 정보</legend>
+<div class="field"><label for="threads-account">스레드 계정 <span class="optional">선택</span></label><input id="threads-account" name="threads_account" placeholder="@계정명 또는 프로필 주소" maxlength="300"><p class="field-help">아직 계정이 없다면 비워두셔도 괜찮습니다.</p></div>
+<div class="field"><label for="threads-stage">현재 운영 상황</label><select id="threads-stage" name="threads_stage"><option value="">선택해 주세요</option><option>처음 시작하려고 해요</option><option>계정은 있지만 방향을 찾고 있어요</option><option>글을 쓰고 있지만 운영이 고민이에요</option><option>내 일과 연결하고 싶어요</option></select></div>
+<div class="field"><label for="threads-goal">컨설팅에서 도움받고 싶은 점 <span class="required">필수</span></label><textarea id="threads-goal" name="threads_goal" rows="5" maxlength="3000" required placeholder="나를 소개하는 말, 콘텐츠 주제, 꾸준한 운영 등 지금의 고민을 편하게 적어주세요."></textarea></div>
+</fieldset>
+<fieldset data-fields="lecture" disabled hidden><legend class="sr-only">강의 정보</legend>
+<div class="field"><label for="organization">기업·기관·단체명 <span class="required">필수</span></label><input id="organization" name="organization" autocomplete="organization" maxlength="150" required placeholder="강의를 요청하는 기관 또는 모임명"></div>
+<div class="field"><label for="lecture-topic">희망 강의 주제 <span class="required">필수</span></label><select id="lecture-topic" name="lecture_topic" required><option value="">선택해 주세요</option><option>스레드 퍼스널 브랜딩</option><option>콘텐츠·글쓰기</option><option>커뮤니티·관계 마케팅</option><option>맞춤 강의·워크숍</option><option>주제부터 함께 정하고 싶어요</option></select></div>
+<div class="field-row"><div class="field"><label for="audience">강의 대상</label><input id="audience" name="audience" maxlength="150" placeholder="예: 예비 창업자, 기관 구성원"></div><div class="field"><label for="attendees">예상 인원</label><select id="attendees" name="attendees"><option value="">선택해 주세요</option><option>20명 이하</option><option>21~50명</option><option>51~100명</option><option>100명 초과</option><option>미정</option></select></div></div>
+<div class="field"><label for="lecture-goal">강의 목적·요청사항 <span class="required">필수</span></label><textarea id="lecture-goal" name="lecture_goal" required rows="5" maxlength="3000" placeholder="어떤 분들이 참여하고, 강의를 통해 무엇을 얻길 원하시나요?"></textarea></div>
+</fieldset>
+<div class="form-actions"><button type="button" class="button" id="next-step">다음 단계 <span aria-hidden="true">→</span></button></div>
+</section>
+<section data-step="2" aria-labelledby="step-two-title" hidden>
+<p class="step-kicker">STEP 02</p><h2 id="step-two-title" tabindex="-1">일정과 연락처를 알려주세요.</h2><p class="step-description">확정되지 않은 일정은 ‘미정’으로 적어주셔도 괜찮습니다.</p>
+<div class="field-row"><div class="field"><label for="preferred-date">희망 일정</label><input id="preferred-date" name="preferred_date" maxlength="150" placeholder="예: 12월 중 평일 오후 / 미정"></div><div class="field"><label for="format">진행 방식</label><select id="format" name="format"><option value="">선택해 주세요</option><option>온라인</option><option>오프라인</option><option>협의 필요</option></select></div></div>
+<div class="field" id="location-field" hidden><label for="location">희망 장소</label><input id="location" name="location" disabled maxlength="200" placeholder="지역 또는 장소를 적어주세요."></div>
+<div class="field-row"><div class="field"><label for="contact-name">성함 <span class="required">필수</span></label><input id="contact-name" name="contact_name" autocomplete="name" required maxlength="80" placeholder="성함 또는 담당자명"></div><div class="field"><label for="phone">연락처 <span class="required">필수</span></label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[0-9+() -]{9,20}" maxlength="20" placeholder="010-0000-0000"></div></div>
+<div class="field"><label for="email">이메일 <span class="optional">선택</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="회신받을 이메일 주소"></div>
+<div class="field"><label for="notes">추가로 전하고 싶은 내용</label><textarea id="notes" name="notes" rows="4" maxlength="3000" placeholder="희망 연락 시간 등 참고할 내용을 남겨주세요."></textarea></div>
+<div class="consent-block"><label class="consent-label"><input type="checkbox" name="privacy_consent" required><span>문의 확인 및 회신을 위한 개인정보 수집·이용에 동의합니다. <span class="required">필수</span></span></label><p>수집 항목: 성함, 연락처, 이메일(선택) 및 작성한 문의 내용<br>이용 목적: 문의 확인 및 회신</p></div>
+<div class="form-notice"><strong>문의폼 준비 중</strong><p>현재는 입력 화면을 확인하실 수 있습니다. 작성한 내용은 저장되거나 전송되지 않습니다.</p></div>
+<p id="form-status" role="status" tabindex="-1"></p>
+<div class="form-actions"><button type="button" class="back-button" id="previous-step">← 이전</button><button type="submit" class="button">문의 내용 확인 <span aria-hidden="true">→</span></button></div>
+</section>
+</form>
+</div>
+<aside class="inquiry-aside"><p class="intro">작성 안내</p><h2>완벽한 계획보다,<br>지금의 고민 한 줄.</h2><p>아직 방향이 정해지지 않아도 괜찮습니다. 현재 상황과 원하는 변화를 편하게 남겨주세요.</p><div><strong>스레드 컨설팅</strong><p>프로필, 콘텐츠 주제, 운영 방향 등 개인의 상황에 맞는 도움을 이야기합니다.</p></div><div><strong>강의</strong><p>참여 대상과 교육 목적을 알려주시면 강의 주제와 진행 방식을 함께 살펴봅니다.</p></div><a href="/#home">비커밍 둘러보기 ↗</a></aside>
+</div></main>
+<footer><a class="brand" href="/">비커밍<span>becoming</span></a><p>경험을 나다운 이야기로 · 퍼스널 브랜딩 코치 김혜경</p><a href="#main">처음으로 ↑</a></footer>
+</body></html>

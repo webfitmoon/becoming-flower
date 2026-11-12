@@ -14,5 +14,14 @@
 .book .text-link{display:inline-flex;color:#007e70;min-height:44px;align-items:center}
 .contact{background:#183c31;min-height:0}.contact:before{display:none}.contact-content{max-width:760px}
 .contact h2{font-size:40px}.contact .contact-button{width:fit-content}
+.program-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:64px}
+.challenge{background:#edf4ef;max-width:none;padding-left:max(50px,calc((100vw - 1220px)/2));padding-right:max(50px,calc((100vw - 1220px)/2))}
+.challenge-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center}
+.challenge-description{color:var(--muted);margin:24px 0 30px;font-size:15px}
+.challenge .button{width:fit-content}.challenge-points{list-style:none;margin:0;padding:0}
+.challenge-points li{display:flex;gap:22px;padding:25px 0;border-top:1px solid #c8d9ce}.challenge-points li>span{color:#007e70;font-size:13px;font-weight:650}
+.challenge-points h3{font-size:19px}.challenge-points p{color:var(--muted);font-size:14px;margin-top:9px}
+.contact-options{display:flex;gap:18px;flex-wrap:wrap}
 @media(max-width:1000px){.program-grid{gap:24px}.program-card h3{font-size:22px}.book{gap:45px;grid-template-columns:220px minmax(0,1fr)}}
 @media(max-width:700px){.hero-image .hero-slide{width:100%;object-position:68% 30%}.hero-copy{background:linear-gradient(90deg,rgba(9,31,23,.94),rgba(9,31,23,.74) 65%,rgba(9,31,23,.45))}.hero h1{font-size:37px}.program-grid{grid-template-columns:1fr;gap:40px;margin-top:32px}.program-card h3{font-size:24px}.program-card .text-link{margin-top:0}.book{grid-template-columns:1fr;gap:32px}.book-cover{max-width:220px;margin:auto;max-height:330px}.contact h2{font-size:29px}}
+@media(max-width:700px){.challenge{padding:65px 24px}.challenge-layout{grid-template-columns:1fr;gap:34px}.contact-options{flex-direction:column;gap:14px;margin-top:28px}.contact-options .contact-button{margin:0;width:100%}}
