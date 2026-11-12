@@ -1,0 +1,29 @@
+/* Vertical learning timeline on every screen size. */
+.framework-section .prepare-list.timeline{grid-template-columns:1fr;max-width:800px;gap:0}
+.framework-section .timeline:before{top:22px;bottom:22px;left:22px;right:auto;width:2px;height:auto}
+.framework-section .timeline li,.framework-section .timeline li:last-child{padding:0 0 38px 84px;min-height:115px}
+.framework-section .timeline li:last-child{padding-bottom:0}
+.framework-section .timeline .step-number{position:absolute;left:0;top:0}
+.framework-section .timeline h3{margin:4px 0 12px}
+.change-section{border-bottom:1px solid var(--line)}
+.change-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;list-style:none;padding:0;margin:45px 0 0}
+.change-grid li{border-top:2px solid #007e70;padding-top:26px}
+.change-before{color:var(--muted);font-size:15px}.change-arrow{display:block;color:#007e70;font-size:22px;margin:16px 0}
+.change-grid h3{font-size:24px;letter-spacing:-1px}
+.records-section{background:#f5f7f5;max-width:none;padding-left:max(50px,calc((100vw - 1220px)/2));padding-right:max(50px,calc((100vw - 1220px)/2))}
+.records-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
+.record-controls{display:flex;gap:9px;flex-shrink:0}.record-controls button{border:1px solid #007e70;border-radius:3px;background:#007e70;color:white;min-width:46px;min-height:46px;font:inherit;font-size:20px;cursor:pointer}
+.record-controls button:hover{background:#006254}.record-controls .record-playback{font-size:13px;padding:0 16px}
+.record-viewport{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#91b7a5 #e1ebe4;margin-top:40px;padding:4px 4px 22px;overscroll-behavior-x:contain}
+.record-card{flex:0 0 calc((100% - 48px)/3);min-width:0;scroll-snap-align:start;border:1px solid #d7e4dc;background:#fff;padding:26px;display:flex;flex-direction:column;border-radius:4px}
+.record-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:33px}.record-category{font-size:12px;color:#006052;background:#edf5f0;padding:6px 11px;border-radius:999px;font-weight:650}.record-number{color:#a4b7ab;font-size:28px;font-weight:500;font-variant-numeric:tabular-nums}
+.record-card h3{font-size:23px;letter-spacing:-.8px;line-height:1.5}.record-card>p{font-size:14px;color:var(--muted);line-height:1.9;margin:20px 0 30px}
+.record-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:22px;border-top:1px solid var(--line)}.record-footer time{font-size:11px;color:var(--muted)}
+.record-footer a{display:inline-flex;align-items:center;gap:12px;font-size:12px;min-height:42px;background:#eaf2ed;color:#006052;padding:8px 12px;border-radius:3px;font-weight:650;white-space:nowrap}
+.record-status{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:12px;font-size:12px;color:var(--muted)}[data-record-counter]{font-variant-numeric:tabular-nums;font-weight:650;color:#007e70}
+.records-section>.text-link{margin-top:28px}
+.reveal-target{transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1);transition-delay:var(--reveal-delay,0ms)}
+.reveal-target.reveal-pending{opacity:0;transform:translateY(38px)}
+@media(max-width:1000px){.record-card{flex-basis:calc((100% - 24px)/2)}.records-section{padding-left:35px;padding-right:35px}.record-card h3{font-size:21px}}
+@media(max-width:700px){.framework-section .timeline li,.framework-section .timeline li:last-child{padding-left:68px}.change-grid{grid-template-columns:1fr;gap:28px;margin-top:32px}.change-grid li{padding-top:22px}.change-grid h3{font-size:23px}.change-arrow{margin:10px 0}.records-section{padding:65px 24px}.records-heading{align-items:flex-start;flex-direction:column;gap:24px}.record-viewport{margin-top:24px;gap:16px}.record-card{flex-basis:100%;padding:23px}.record-status{align-items:flex-start}.record-status>span:last-child{max-width:220px;font-size:11px}.record-controls button{min-width:44px;min-height:44px}}
+@media(prefers-reduced-motion:reduce){.reveal-target,.reveal-target.reveal-pending{opacity:1;transform:none;transition:none}.record-viewport{scroll-behavior:auto}}
