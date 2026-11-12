@@ -57,7 +57,6 @@ export function BecomingProcess() {
   const frame=useCurrentFrame(); const step=Math.min(3,Math.floor(frame/90));
   return <AbsoluteFill style={{background:'#edf5ef',fontFamily:font,color:ink,overflow:'hidden'}}>
     <div style={{position:'absolute',inset:0,background:'radial-gradient(circle at 65% 45%,#ffffff 0%,transparent 65%)'}}/>
-    <div style={{position:'absolute',top:50,left:54,right:54,display:'flex',justifyContent:'space-between',alignItems:'center'}}><span style={{fontSize:19,letterSpacing:2,color:green,fontWeight:650}}>BECOMING</span><span style={{fontSize:20,color:muted}}>{String(step+1).padStart(2,'0')} / 04</span></div>
     <div style={{position:'absolute',top:108,left:54}}><div style={{fontSize:58,fontWeight:750,letterSpacing:-2}}>{titles[step]}</div><div style={{fontSize:27,color:muted,marginTop:12}}>{subtitles[step]}</div></div>
     <div style={{position:'absolute',left:0,top:150,width:720,height:650}}><Discovery/><Definition/><Execution/><Connection/></div>
     <div style={{position:'absolute',left:54,right:54,bottom:44,height:3,background:'#c9ded0'}}><div style={{height:'100%',background:green,width:`${interpolate(frame,[0,359],[0,100],clamp)}%`}}/></div>
