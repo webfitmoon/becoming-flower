@@ -1,0 +1,35 @@
+/* Homepage composition: message, evidence, activities, person, method, practice. */
+.hero h1{max-width:650px}.hero-description{max-width:560px}
+.trust-strip{background:#fff;border-bottom:1px solid var(--line);padding:38px 50px}
+.trust-strip dl{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.trust-strip dl>div{padding-left:28px;border-left:1px solid var(--line)}.trust-strip dl>div:first-child{padding-left:0;border:0}
+.trust-strip dt{font-size:25px;font-weight:700;letter-spacing:-1px;color:#007e70}.trust-strip dd{margin:8px 0 0;color:var(--muted);font-size:13px}
+.split-heading{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end}
+.split-heading>p:last-child{margin:0!important;font-size:15px!important;line-height:1.9}
+.activity-feature{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center;margin-top:50px}
+.activity-feature figure{height:460px;overflow:hidden;border-radius:0 0 56px 0}.activity-feature img{object-position:50% 35%}
+.activity-copy h3{font-size:30px;letter-spacing:-1.5px;line-height:1.5;margin:13px 0 22px}
+.activity-copy>p:not(.small-label){font-size:15px;color:var(--muted);line-height:1.95}
+.activity-topics{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;list-style:none;padding:22px 0;margin:24px 0 0;border-top:1px solid var(--line)}
+.activity-topics li{font-size:14px}.activity-topics li:before{content:'·';color:#007e70;margin-right:9px;font-weight:700}
+.activity-copy .text-link,.activity-note .text-link,.about-copy .text-link{color:#007e70;min-height:44px;align-items:center;width:fit-content}
+.activity-note{display:grid;grid-template-columns:1fr 1.1fr auto;align-items:center;gap:30px;border-top:1px solid #c9d9ce;margin-top:55px;padding-top:32px}
+.activity-note h3{font-size:22px;margin-top:9px}.activity-note>p{font-size:14px;color:var(--muted)}.activity-note .text-link{margin:0;font-size:14px;gap:20px}
+.about-section .occasion-layout{margin-top:0}.about-copy p{line-height:1.95;font-size:15px}.about-section .detail-image{height:560px}
+.book{padding-top:65px;padding-bottom:85px;grid-template-columns:245px minmax(0,1fr)}
+.framework-section{border-top:1px solid var(--line)}.framework-section .prepare-list{gap:28px}.framework-section .prepare-list li{margin:0;padding-right:0}
+.framework-section .step-number{font-size:12px;font-weight:650;color:#007e70;letter-spacing:1px}.framework-section h3{font-size:26px;margin:10px 0 15px}.framework-section .prepare-list p{font-size:15px;line-height:1.9}
+.challenge-direction{border-top:1px solid #c8d9ce;margin-top:55px;padding-top:28px}.challenge-direction>p{font-size:13px;color:#007e70;font-weight:650}
+.challenge-direction ul{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.challenge-direction li{display:flex;flex-direction:column;gap:9px}.challenge-direction span{font-size:14px;color:var(--muted)}.challenge-direction strong{font-size:20px;font-weight:650}.challenge-direction strong:before{content:'→';margin-right:12px;color:#007e70}
+.practice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:45px}.practice-grid article{border-top:1px solid #b6cabe;padding-top:24px}.practice-grid article>span{font-size:12px;color:#007e70}.practice-grid h3{font-size:21px;margin:15px 0}.practice-grid p{font-size:15px;color:var(--muted);line-height:1.9}
+@media(max-width:1000px){.trust-strip{padding:30px 35px}.trust-strip dl{gap:20px}.trust-strip dl>div{padding-left:18px}.trust-strip dt{font-size:21px}.split-heading{gap:35px}.activity-feature{gap:40px}.activity-feature figure{height:400px}.activity-copy h3{font-size:26px}.activity-note{grid-template-columns:1fr 1.3fr}.activity-note .text-link{grid-column:2}.book{gap:50px}.practice-grid{gap:26px}.practice-grid h3{font-size:19px}}
+@media(max-width:700px){
+ .trust-strip{padding:32px 24px}.trust-strip dl{grid-template-columns:1fr 1fr;gap:26px 18px}.trust-strip dl>div{padding:0;border:0}.trust-strip dt{font-size:21px}.trust-strip dd{font-size:12px;line-height:1.7}
+ .split-heading{grid-template-columns:1fr;gap:22px}.split-heading>p:last-child{font-size:14px!important}
+ .activity-feature{grid-template-columns:1fr;gap:30px;margin-top:32px}.activity-feature figure{height:300px;border-radius:0 0 40px 0}.activity-copy h3{font-size:26px}.activity-copy>p:not(.small-label){font-size:14px}.activity-topics{gap:12px;font-size:13px}.activity-topics li{font-size:13px}
+ .activity-note{grid-template-columns:1fr;gap:17px;margin-top:35px;padding-top:26px}.activity-note .text-link{grid-column:auto}.about-section .detail-image{height:390px}
+ .book{grid-template-columns:1fr;padding-top:50px;padding-bottom:60px;gap:30px}.framework-section .prepare-list{gap:30px 24px}.framework-section h3{font-size:24px}.framework-section .prepare-list p{font-size:14px}
+ .challenge-direction{margin-top:35px}.challenge-direction ul{grid-template-columns:1fr;gap:20px}.challenge-direction li{gap:4px}.challenge-direction strong{font-size:19px}
+ .practice-grid{grid-template-columns:1fr;gap:28px;margin-top:30px}.practice-grid h3{font-size:21px}.practice-grid p{font-size:14px}
+}
