@@ -25,3 +25,9 @@
 @media(max-width:1000px){.program-grid{gap:24px}.program-card h3{font-size:22px}.book{gap:45px;grid-template-columns:220px minmax(0,1fr)}}
 @media(max-width:700px){.hero-image .hero-slide{width:100%;object-position:68% 30%}.hero-copy{background:linear-gradient(90deg,rgba(9,31,23,.94),rgba(9,31,23,.74) 65%,rgba(9,31,23,.45))}.hero h1{font-size:37px}.program-grid{grid-template-columns:1fr;gap:40px;margin-top:32px}.program-card h3{font-size:24px}.program-card .text-link{margin-top:0}.book{grid-template-columns:1fr;gap:32px}.book-cover{max-width:220px;margin:auto;max-height:330px}.contact h2{font-size:29px}}
 @media(max-width:700px){.challenge{padding:65px 24px}.challenge-layout{grid-template-columns:1fr;gap:34px}.contact-options{flex-direction:column;gap:14px;margin-top:28px}.contact-options .contact-button{margin:0;width:100%}}
+/* Visible action surfaces on both the homepage and inquiry page. */
+.text-link,.book .text-link,.activity-copy .text-link,.about-copy .text-link{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;min-height:48px;width:fit-content;padding:12px 19px;background:#007e70;color:#fff;border:1px solid #007e70;border-radius:3px;font-weight:650}
+.text-link:hover,.book .text-link:hover,.activity-copy .text-link:hover,.about-copy .text-link:hover{background:#006254;color:#fff}
+.hero .text-link{background:#fff;color:#006052;border-color:#fff}.hero .text-link:hover{background:#e4f0e9;color:#006052}
+.menu-toggle{background:#edf4ef;color:#006052}
+footer>a:last-child{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;background:#edf4ef;color:#006052;border-radius:3px}
