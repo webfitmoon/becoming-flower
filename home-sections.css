@@ -1,10 +1,7 @@
 /* Homepage composition: message, evidence, activities, person, method, practice. */
 .hero h1{max-width:650px}.hero-description{max-width:560px}
 .hero .intro{display:inline-flex;align-items:center;width:fit-content;padding:8px 15px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.4);line-height:1.5}
-.hero{background:radial-gradient(ellipse at 80% 40%,#315c48 0%,#173e32 55%,#103328 100%);min-height:620px}
-.hero-copy{background:none;min-height:620px;padding-top:76px;padding-bottom:76px}
-.hero-image .hero-slide{left:auto;right:8%;top:14%;bottom:auto;width:27%;height:72%;object-fit:contain;object-position:center;border-radius:4px}
-.hero .hero-description{max-width:590px}.about-section .detail-image.about-image{height:440px;background:#edf4ef}.about-section .about-image img{object-fit:contain;object-position:center}
+.about-section .detail-image.about-image{height:440px;background:#edf4ef}.about-section .about-image img{object-fit:contain;object-position:center}
 .hero-actions{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap}.hero .hero-actions .text-link{margin:0}.hero-actions .button,.hero-actions .text-link{min-height:54px;padding:14px 18px;gap:16px;font-size:14px}
 .trust-strip{background:#fff;border-bottom:1px solid var(--line);padding:38px 50px}
 .trust-strip dl{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
@@ -46,7 +43,6 @@
 .contact .contact-background{object-position:65% 50%}.cta-image-caption{position:absolute;right:24px;bottom:16px;font-size:10px;color:#fff;background:#123b30c9;padding:5px 9px;border-radius:4px}
 @media(max-width:1000px){.trust-strip{padding:30px 35px}.trust-strip dl{gap:20px}.trust-strip dl>div{padding-left:18px}.trust-strip dt{font-size:21px}.split-heading{gap:35px}.activity-feature{gap:40px}.activity-feature figure{height:400px}.activity-copy h3{font-size:26px}.activity-note{grid-template-columns:1fr 1.3fr}.activity-note .text-link{grid-column:2}.book{gap:50px}.practice-grid{gap:26px}.practice-grid h3{font-size:19px}}
 @media(max-width:700px){
- .hero,.hero-copy{min-height:560px}.hero-copy{background:none;padding-top:55px;padding-bottom:55px}.hero-image{display:none}
  .hero-actions{gap:10px;flex-wrap:nowrap}.hero-actions .button,.hero-actions .text-link{font-size:12px;padding:12px 13px;gap:10px;white-space:nowrap}
  .trust-strip{padding:32px 24px}.trust-strip dl{grid-template-columns:1fr 1fr;gap:26px 18px}.trust-strip dl>div{padding:0;border:0}.trust-strip dt{font-size:21px}.trust-strip dd{font-size:12px;line-height:1.7}
  .split-heading{grid-template-columns:1fr;gap:22px}.split-heading>p:last-child{font-size:14px!important}
@@ -63,4 +59,3 @@
  .framework-section .timeline .step-number{position:absolute;left:0;top:0}
  .framework-section .timeline h3{margin:5px 0 12px}
 }
-
