@@ -42,3 +42,6 @@
 /* Direction between each before-and-after pair. */
 .change-pair .pair-arrow{display:grid;place-items:center;width:48px;height:48px;justify-self:center;border:1px solid #b8d5c5;border-radius:50%;background:#fff;color:#007e70;rotate:none}.pair-arrow svg{width:24px;height:24px}
 @media(max-width:700px){.change-pair .pair-arrow{width:38px;height:38px;justify-self:start;margin:2px 0}.pair-arrow svg{width:21px;height:21px;transform:rotate(90deg)}}
+
+.comparison-row{position:relative}.comparison-arrow{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:24px;line-height:1;color:#007e70;z-index:1}.comparison-row h3{padding-left:36px}
+@media(max-width:700px){.comparison-arrow{font-size:20px}.comparison-row h3{padding-left:24px}}
