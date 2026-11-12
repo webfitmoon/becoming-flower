@@ -35,8 +35,10 @@
   }
   function update() {
     root.querySelector('[data-record-counter]').textContent = `${String(index()+1).padStart(2,'0')} / ${String(cards.length).padStart(2,'0')}`;
-    pause.textContent = enabled ? '일시정지' : '자동 재생';
-    pause.setAttribute('aria-label',enabled ? '활동 자동 넘김 일시정지' : '활동 자동 넘김 시작');
+    if (pause) {
+      pause.textContent = enabled ? '일시정지' : '자동 재생';
+      pause.setAttribute('aria-label',enabled ? '활동 자동 넘김 일시정지' : '활동 자동 넘김 시작');
+    }
   }
   function schedule() {
     clearTimeout(timer); update();
@@ -52,12 +54,13 @@
     if (direction < 0 && viewport.scrollLeft <= 3) next = max;
     viewport.scrollTo({left:Math.max(0,Math.min(max,next)),behavior:motion.matches ? 'instant' : 'smooth'});
   }
-  root.querySelector('[data-record-prev]').addEventListener('click',() => { move(-1); schedule(); });
-  root.querySelector('[data-record-next]').addEventListener('click',() => { move(1); schedule(); });
-  pause.addEventListener('click',() => { enabled = !enabled; schedule(); });
+  root.querySelector('[data-record-prev]')?.addEventListener('click',() => { move(-1); schedule(); });
+  root.querySelector('[data-record-next]')?.addEventListener('click',() => { move(1); schedule(); });
+  pause?.addEventListener('click',() => { enabled = !enabled; schedule(); });
   viewport.addEventListener('scroll',() => { cancelAnimationFrame(scrollFrame); scrollFrame = requestAnimationFrame(update); },{passive:true});
   viewport.addEventListener('pointerdown',event => { if(event.pointerType !== 'mouse') { enabled=false; schedule(); } });
   viewport.addEventListener('keydown',event => {
+    if (event.code === 'Space' && event.target === viewport) { event.preventDefault(); enabled=!enabled; schedule(); }
     if(event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1); schedule(); }
   });
   root.addEventListener('mouseenter',() => { hovering=true; schedule(); });

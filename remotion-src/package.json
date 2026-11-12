@@ -1,0 +1,1 @@
+{"name":"becoming-process-animation","private":true,"scripts":{"build":"node build.cjs"},"dependencies":{"@remotion/player":"4.0.540","remotion":"4.0.540","react":"19.3.1","react-dom":"19.3.1"},"devDependencies":{"esbuild":"0.25.12"}}

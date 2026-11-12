@@ -19,6 +19,7 @@
 .activity-note h3{font-size:22px;margin-top:9px}.activity-note>p{font-size:14px;color:var(--muted)}.activity-note .text-link{margin:0;font-size:14px;gap:20px}
 .about-section .occasion-layout{margin-top:0}.about-copy p{line-height:1.95;font-size:15px}.about-section .detail-image{height:560px}
 .book{padding-top:65px;padding-bottom:85px;grid-template-columns:245px minmax(0,1fr)}
+.book{grid-template-columns:minmax(0,1fr) 280px;gap:100px}.book .book-cover{grid-column:2;grid-row:1;justify-self:center;max-width:245px}.book>div{grid-column:1;grid-row:1;max-width:730px}
 .framework-section{border-top:1px solid var(--line)}.framework-section .prepare-list{gap:28px}.framework-section .prepare-list li{margin:0;padding-right:0}
 .framework-section .step-number{font-size:12px;font-weight:650;color:#007e70;letter-spacing:1px}.framework-section h3{font-size:26px;margin:10px 0 15px}.framework-section .prepare-list p{font-size:15px;line-height:1.9}
 .challenge-direction{border-top:1px solid #c8d9ce;margin-top:55px;padding-top:28px}.challenge-direction>p{font-size:13px;color:#007e70;font-weight:650}
@@ -46,6 +47,7 @@
  .activity-feature{grid-template-columns:1fr;gap:30px;margin-top:32px}.activity-feature figure{height:300px;border-radius:0 0 40px 0}.activity-copy h3{font-size:26px}.activity-copy>p:not(.small-label){font-size:14px}.activity-topics{gap:12px;font-size:13px}.activity-topics li{font-size:13px}
  .activity-note{grid-template-columns:1fr;gap:17px;margin-top:35px;padding-top:26px}.activity-note .text-link{grid-column:auto}.about-section .detail-image{height:390px}
  .book{grid-template-columns:1fr;padding-top:50px;padding-bottom:60px;gap:30px}.framework-section .prepare-list{gap:30px 24px}.framework-section h3{font-size:24px}.framework-section .prepare-list p{font-size:14px}
+ .book .book-cover{grid-column:1;grid-row:2}.book>div{grid-column:1;grid-row:1}
  .challenge-direction{margin-top:35px}.challenge-direction ul{grid-template-columns:1fr;gap:20px}.challenge-direction li{gap:4px}.challenge-direction strong{font-size:19px}
  .practice-grid{grid-template-columns:1fr;gap:28px;margin-top:30px}.practice-grid h3{font-size:21px}.practice-grid p{font-size:14px}
  .framework-section .prepare-list.timeline{grid-template-columns:1fr;gap:0}

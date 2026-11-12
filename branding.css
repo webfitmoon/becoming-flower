@@ -31,3 +31,5 @@
 .hero .text-link{background:#fff;color:#006052;border-color:#fff}.hero .text-link:hover{background:#e4f0e9;color:#006052}
 .menu-toggle{background:#edf4ef;color:#006052}
 footer>a:last-child{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;background:#edf4ef;color:#006052;border-radius:3px}
+.copyright{border-top:1px solid var(--line);padding:22px 24px;text-align:center;font-size:11px;color:#69776e;background:#fff;line-height:1.9}.copyright span{margin-left:12px}.copyright a{color:#006052;text-decoration:underline;text-underline-offset:3px}.copyright a:hover{color:#003e35}
+@media(max-width:700px){.copyright span{display:block;margin-left:0}}
