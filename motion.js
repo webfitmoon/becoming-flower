@@ -2,7 +2,7 @@
 (() => {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if ('IntersectionObserver' in window && !motion.matches) {
-    const targets = [...document.querySelectorAll('main .section-heading, .trust-strip dl>div, .activity-feature figure, .activity-copy, .activity-note, .about-copy, .about-image, .book>*, .timeline li, .challenge-layout>*, .change-grid li, .practice-grid article, .records-heading, .record-viewport, .contact-content')];
+    const targets = [...document.querySelectorAll('main .section-heading, .trust-strip dl>div, .activity-feature figure, .activity-copy, .activity-note, .about-copy, .about-image, .book>*, .timeline li, .challenge-layout>*, .change-pair, .practice-grid article, .records-heading, .record-viewport, .contact-content')];
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) { entry.target.classList.remove('reveal-pending'); observer.unobserve(entry.target); }

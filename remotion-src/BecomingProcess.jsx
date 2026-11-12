@@ -2,7 +2,7 @@ import React from 'react';
 import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 const ink='#123f34', green='#007e70', muted='#6b8579';
-const titles=['발견','정의','실행','연결'];
+const titles=['내 강점 찾기','방향 정하기','글로 표현하기','사람과 이어지기'];
 const subtitles=['경험 속에서 나만의 강점을','누구에게 어떤 도움을 줄지','내 언어로 쓰고 나누며','콘텐츠에서 신뢰와 기회로'];
 const clamp={extrapolateLeft:'clamp',extrapolateRight:'clamp'};
 const font='Pretendard, "Malgun Gothic", sans-serif';
@@ -60,6 +60,6 @@ export function BecomingProcess() {
     <div style={{position:'absolute',top:50,left:54,right:54,display:'flex',justifyContent:'space-between',alignItems:'center'}}><span style={{fontSize:19,letterSpacing:2,color:green,fontWeight:650}}>BECOMING</span><span style={{fontSize:20,color:muted}}>{String(step+1).padStart(2,'0')} / 04</span></div>
     <div style={{position:'absolute',top:108,left:54}}><div style={{fontSize:58,fontWeight:750,letterSpacing:-2}}>{titles[step]}</div><div style={{fontSize:27,color:muted,marginTop:12}}>{subtitles[step]}</div></div>
     <div style={{position:'absolute',left:0,top:150,width:720,height:650}}><Discovery/><Definition/><Execution/><Connection/></div>
-    <div style={{position:'absolute',left:54,right:54,bottom:40,display:'flex',gap:12}}>{titles.map((title,i)=><div key={title} style={{flex:1,borderTop:`3px solid ${i<=step?green:'#c9ded0'}`,paddingTop:14,fontSize:23,fontWeight:i===step?750:500,color:i===step?green:muted}}>{title}</div>)}</div>
+    <div style={{position:'absolute',left:54,right:54,bottom:44,height:3,background:'#c9ded0'}}><div style={{height:'100%',background:green,width:`${interpolate(frame,[0,359],[0,100],clamp)}%`}}/></div>
   </AbsoluteFill>;
 }

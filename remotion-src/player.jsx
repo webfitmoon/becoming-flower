@@ -1,36 +1,43 @@
-import React,{useEffect,useRef,useState} from 'react';
+import React,{useEffect,useRef} from 'react';
 import {createRoot} from 'react-dom/client';
 import {Player} from '@remotion/player';
 import {BecomingProcess} from './BecomingProcess';
 
 function ProcessPlayer() {
-  const player=useRef(null); const container=useRef(null);
-  const [playing,setPlaying]=useState(false);
+  const player=useRef(null);
+  const container=useRef(null);
   useEffect(()=>{
-    const current=player.current;
     const motion=matchMedia('(prefers-reduced-motion: reduce)');
-    const onPlay=()=>setPlaying(true); const onPause=()=>setPlaying(false);
-    const onFrame=event=>{
-      const step=Math.min(3,Math.floor(event.detail.frame/90));
-      container.current.closest('.process-layout').dataset.currentStep=String(step);
+    let visible=false,hovered=false,handle,lastTime=null,elapsed=0,lastFrame=-1;
+    const showFrame=frame=>{
+      if(frame===lastFrame)return;
+      lastFrame=frame;
+      // Always use the initialized current handle, rather than its mount-time snapshot.
+      player.current?.seekTo(frame);
+      container.current.dataset.frame=String(frame);
+      container.current.closest('.process-layout').dataset.currentStep=String(Math.min(3,Math.floor(frame/90)));
     };
-    current.addEventListener('play',onPlay); current.addEventListener('pause',onPause);current.addEventListener('ended',onPause);current.addEventListener('frameupdate',onFrame);
-    let started=false;
-    const observer=new IntersectionObserver(entries=>{
-      if(entries[0].isIntersecting){
-        if(!started){started=true;if(motion.matches){current.seekTo(359);}else current.play();}
-      }else current.pause();
-    },{threshold:.45});
+    const stop=()=>{cancelAnimationFrame(handle);lastTime=null;};
+    const tick=now=>{
+      if(!visible||hovered||document.hidden||motion.matches){stop();return;}
+      if(lastTime!==null)elapsed+=Math.min(now-lastTime,100);
+      lastTime=now;
+      showFrame((24+Math.floor(elapsed*30/1000))%360);
+      handle=requestAnimationFrame(tick);
+    };
+    const resume=()=>{stop();if(visible&&!hovered&&!document.hidden&&!motion.matches)handle=requestAnimationFrame(tick);};
+    showFrame(24);
+    const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting&&entries[0].intersectionRatio>=.12;resume();},{threshold:[0,.12]});
     observer.observe(container.current);
-    const onMotion=()=>{if(motion.matches){current.pause();current.seekTo(359);}};
-    motion.addEventListener('change',onMotion);
-    return()=>{observer.disconnect();motion.removeEventListener('change',onMotion);current.removeEventListener('play',onPlay);current.removeEventListener('pause',onPause);current.removeEventListener('ended',onPause);current.removeEventListener('frameupdate',onFrame);};
+    const enter=()=>{hovered=true;stop();};
+    const leave=()=>{hovered=false;resume();};
+    const onMotion=()=>{if(motion.matches){stop();showFrame(65);}else resume();};
+    const target=container.current;
+    target.addEventListener('mouseenter',enter);target.addEventListener('mouseleave',leave);
+    document.addEventListener('visibilitychange',resume);motion.addEventListener('change',onMotion);
+    return()=>{stop();observer.disconnect();target.removeEventListener('mouseenter',enter);target.removeEventListener('mouseleave',leave);document.removeEventListener('visibilitychange',resume);motion.removeEventListener('change',onMotion);};
   },[]);
-  return <div ref={container}>
-    <Player ref={player} component={BecomingProcess} durationInFrames={360} compositionWidth={720} compositionHeight={850} fps={30} controls={false} autoPlay={false} loop={false} clickToPlay={false} style={{width:'100%',borderRadius:8,overflow:'hidden'}}/>
-    <div className="process-player-controls"><span>발견에서 연결까지 · 12초</span><button type="button" onClick={()=>{if(playing){player.current.pause();}else{if(player.current.getCurrentFrame()>=359)player.current.seekTo(0);player.current.play();}}}>{playing?'잠시 멈추기':'다시 보기'} <span aria-hidden="true">{playing?'Ⅱ':'↻'}</span></button></div>
-  </div>;
+  return <div ref={container} className="process-player-stage"><Player ref={player} component={BecomingProcess} durationInFrames={360} compositionWidth={720} compositionHeight={850} fps={30} controls={false} autoPlay={false} initiallyMuted loop={false} clickToPlay={false} initialFrame={24} style={{width:'100%',borderRadius:4,overflow:'hidden'}}/></div>;
 }
-
 const mount=document.getElementById('becoming-process-player');
-if(mount) createRoot(mount).render(<ProcessPlayer/>);
+if(mount)createRoot(mount).render(<ProcessPlayer/>);
