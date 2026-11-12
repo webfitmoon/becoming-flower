@@ -1,0 +1,18 @@
+/* Keep the existing teal palette, type and full-width banner. */
+.hero-image .hero-slide{left:auto;right:0;width:58%;object-position:50% 28%}
+.hero-copy{background:linear-gradient(90deg,rgba(9,31,23,.94),rgba(9,31,23,.78) 44%,rgba(9,31,23,.12))}
+.hero h1{max-width:620px}.hero-description{max-width:520px}
+.programs{background:#f5f7f5;max-width:none}.programs-inner{max-width:1220px;margin:auto}
+.program-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin-top:46px}
+.program-card{border-top:3px solid #007e70;padding-top:25px;display:flex;flex-direction:column;align-items:flex-start}
+.program-card h3{font-size:25px;line-height:1.5;margin:10px 0 18px;letter-spacing:-1px}
+.program-question{font-weight:650;margin-bottom:15px}.program-description{color:var(--muted);font-size:15px;margin-bottom:26px}
+.program-card .text-link{margin-top:auto;min-height:44px;align-items:center;color:#007e70}
+.about-copy p{color:var(--muted);margin-top:24px}.about-image img{object-position:50% 28%}
+.book{display:grid;grid-template-columns:280px minmax(0,1fr);gap:80px;align-items:center;border-top:1px solid var(--line)}
+.book-cover{height:auto;max-height:420px;object-fit:contain}.book p:not(.intro){color:var(--muted);margin:24px 0}
+.book .text-link{display:inline-flex;color:#007e70;min-height:44px;align-items:center}
+.contact{background:#183c31;min-height:0}.contact:before{display:none}.contact-content{max-width:760px}
+.contact h2{font-size:40px}.contact .contact-button{width:fit-content}
+@media(max-width:1000px){.program-grid{gap:24px}.program-card h3{font-size:22px}.book{gap:45px;grid-template-columns:220px minmax(0,1fr)}}
+@media(max-width:700px){.hero-image .hero-slide{width:100%;object-position:68% 30%}.hero-copy{background:linear-gradient(90deg,rgba(9,31,23,.94),rgba(9,31,23,.74) 65%,rgba(9,31,23,.45))}.hero h1{font-size:37px}.program-grid{grid-template-columns:1fr;gap:40px;margin-top:32px}.program-card h3{font-size:24px}.program-card .text-link{margin-top:0}.book{grid-template-columns:1fr;gap:32px}.book-cover{max-width:220px;margin:auto;max-height:330px}.contact h2{font-size:29px}}
